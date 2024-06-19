@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        .celcius-container {
+    text-align: center;
+}
+.body-container {
+    background-color: black;
+    color: white;
+
+}
+header {
+    text-align: center;
+}
+
+.result-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+textarea {
+    background-color: #5e5e5e;
+    resize: none;
+    border-radius: 7px;
+    font-size: 14px;
+    border-color: #545454;
+    color: white;
+}
+button {
+    background-color: #3d3d3d;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+.subject-info {
+    font-size: 22px;
+    font-style: italic;
+    font-family: math;
+}
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- link css -->
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body  class="body-container">
     <header>
@@ -70,6 +105,17 @@
          </section>
     </main>
 
-    <script src="js/script.js"></script>
+    <script>
+const input = document.getElementById("suhu")
+const cek = document.getElementById("button")
+const fahrenheit= document.getElementById("fahrenheit")
+
+cek.addEventListener("click", function(){
+if(input.value){
+fahrenheit.value = Number(input.value)*9/5+32
+}
+})
+console.log(suhu(30))
+    </script>
 </body>
 </html>
